@@ -1,3 +1,8 @@
+Requirements
+============
+* Python 3.7 or higher
+* Linux
+
 Preparation
 ======================
 Enter in the terminal following commands for creating a directory of an app:
