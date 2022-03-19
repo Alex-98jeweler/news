@@ -80,14 +80,14 @@ For successful running of a app, you have to create virtual environment and inst
 
 On this stage you should get such structure:
 
-*news
-    *env
-    *news
-    *test_task
-    *Makefile
-    *manage.py
-    *README.rst
-    *requirements.txt
+* news
+    * env
+    * news
+    * test_task
+    * Makefile
+    * manage.py
+    * README.rst
+    * requirements.txt
 
 
 
