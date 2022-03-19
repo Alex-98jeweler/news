@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Predilection  
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20100809
+
+-->
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Пусть гаварят</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+{% load static %}
+<link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="{% url 'index' %}">Главная</a></li>
+				<li><a href="{% url 'news-create' %}">Создать новость</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+	</div>
+</div>
+<!-- end #header -->
+<!-- end #header-wrapper -->
+<div id="logo">
+	<h1><a href="#">Пусть гаварят</a></h1>
+	<p><em> Лучшие новасти на плонете</a></em></p>
+</div>
+<hr />
+<!-- end #logo -->
+<div id="page">
+	<div id="page-bgtop">
+   {% block content %}{% endblock content %}
+		<div style="clear: both;">&nbsp;</div>
+    {% block pagination %}
+    {% if is_paginated %}
+    <div class="pagination">
+      {% for num in count_pages %}
+      <a href="{{ request.path }}?page={{ num }}" class='page'>{{ num }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endblock %}
+	
+	</div>
+
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) Все права сохранены за правообладателем.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
+

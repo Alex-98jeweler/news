@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+
+{% if page_obj %}
+  
+  <div class="show">
+    <span name="q">Показывать по:</span>
+    <a href="{{ request.path }}?num=20">20</a>
+    <a href="{{ request.path }}?num=40">40</a>
+    <a href="{{ request.path }}?num=50">50</a>
+  </div>
+  {% for new in page_obj %}
+  <div class='content'>
+		<div class="post">
+			<p class="meta"><span class="date">{{ new.date_published }}</span></p>
+			<h2 class="title"><a href="{% url 'news-detail' new.id %}"> {{ new.header }} </a></h2>
+			<div class="entry">
+				<p>{{ new.show_short_text }}</p>
+			</div>
+      {% endfor %}
+      {% else %}
+      <p>Новостей пока нет</p>
+      {% endif %}
+		</div>
+  </div
+{% endblock %}

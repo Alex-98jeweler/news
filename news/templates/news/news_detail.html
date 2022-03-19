@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class='content'>
+  <div class="post">
+    <p class="meta"><span class="date">{{ news.date_published }}(<a href="{% url 'news-delete' news.id%}">удалить</a>)</span></p>
+    <h2 class="title"> {{ news.header }} </h2>
+    <div class="entry">
+      <p>{{ news.body }}</p>
+    </div>
+    <div class="detail">
+      <img sizes="(max-width: 600px) 300px" src="../../media/{{ news.image }}">
+    </div>
+  </div>
+</div>
+{% endblock %}
