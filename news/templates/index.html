@@ -9,6 +9,7 @@
     <a href="{{ request.path }}?num=20">20</a>
     <a href="{{ request.path }}?num=40">40</a>
     <a href="{{ request.path }}?num=50">50</a>
+    <span style="color: black;">|Показано: {{ show_by }} новостей</span>
   </div>
   {% for new in page_obj %}
   <div class='content'>

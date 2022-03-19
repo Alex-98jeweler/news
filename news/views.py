@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
-from django.views.generic.edit import CreateView, DeleteView
+from django.views.generic.edit import DeleteView
 from django.core.paginator import Paginator
 
 from .models import *
@@ -11,21 +11,24 @@ from .forms import NewsForm
 def news_list(request):
     news = News.objects.all().order_by('-date_published')
     size = 20
+    
     if request.GET.get('num'):
         size = request.GET.get('num')
+
     paginator = Paginator(news, size)
 
     count_pages = None
     is_paginated = False
     if paginator.num_pages > 1:
         is_paginated = True
-        count_pages = [i for i in range(1, paginator.count + 1)]
+        count_pages = [i for i in range(1, paginator.num_pages + 1)]
 
     page = request.GET.get('page') 
     page_obj = paginator.get_page(page)
     context = {
         'page_obj':page_obj,
         'is_paginated': is_paginated,
+        'show_by': size,
         'count_pages': count_pages,
     }
     return render(request, 'index.html', context=context)

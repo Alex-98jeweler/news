@@ -47,7 +47,7 @@ Released   : 20100809
     {% if is_paginated %}
     <div class="pagination">
       {% for num in count_pages %}
-      <a href="{{ request.path }}?page={{ num }}" class='page'>{{ num }}</a>
+      <a href="{{ request.path }}?page={{ num }}&num={{ show_by }}" class='page'>{{ num }}</a>
       {% endfor %}
     </div>
     {% endif %}
