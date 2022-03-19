@@ -1,5 +1,18 @@
 Preparation
 ======================
+Enter in the terminal following commands for creating a directory of an app:
+
+.. code-block:: shell
+
+    mkdir news
+    cd news
+
+Clone repo:
+
+.. code-block::
+    git clone git@github.com:Alex-98jeweler/news.git .
+
+
 For beginning, you have to configure database. In the file *test_task2/test_task/settings.py* you can see a dict DATABASE, which looks like:
 
 .. code-block:: python
