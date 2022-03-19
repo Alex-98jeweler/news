@@ -10,6 +10,7 @@ Enter in the terminal following commands for creating a directory of an app:
 Clone repo:
 
 .. code-block::
+
     git clone git@github.com:Alex-98jeweler/news.git .
 
 
