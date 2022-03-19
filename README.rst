@@ -161,6 +161,6 @@ Now, follow the link http://127.0.0.1:8000/, and try to use this application.
 
 A page of news list look like:
 
-# Without some data
-    .. figure:: _image/1.png
+* Without some data
+    .. figure:: image/1.png
         :scale: 80%
