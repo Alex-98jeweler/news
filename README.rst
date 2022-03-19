@@ -162,5 +162,47 @@ Now, follow the link http://127.0.0.1:8000/, and try to use this application.
 A page of news list look like:
 
 * Without some data
+
     .. figure:: image/1.png
-        :scale: 80%
+        :scale: 100%
+
+* With some data. A count of items and pagination.
+
+    .. figure :: image/3.png
+        :scale: 100%
+
+    .. figure :: image/4.png
+        :scale: 100%
+
+    .. figure :: image/5.png
+        :scale: 100%
+
+    .. figure :: image/6.png
+        :scale: 100%
+
+    .. figure :: image/7.png
+        :scale: 100%
+
+    .. figure :: image/8.png
+        :scale: 100%
+
+    .. figure :: image/9.png
+        :scale: 100%
+
+News create form: 
+
+    .. figure :: image/2.png
+        :scale: 100%
+
+News detail information:
+
+    .. figure :: image/10.png
+        :scale: 100%
+
+News delete:
+    .. figure :: image/11.png
+        :scale: 100%
+
+
+    
+
