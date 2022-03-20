@@ -11,7 +11,6 @@ from .forms import NewsForm
 def news_list(request):
     news = News.objects.all().order_by('-date_published')
     size = 20
-    
     if request.GET.get('num'):
         size = request.GET.get('num')
 
@@ -23,15 +22,16 @@ def news_list(request):
         is_paginated = True
         count_pages = [i for i in range(1, paginator.num_pages + 1)]
 
-    page = request.GET.get('page') 
+    page = request.GET.get('page')
     page_obj = paginator.get_page(page)
     context = {
-        'page_obj':page_obj,
+        'page_obj': page_obj,
         'is_paginated': is_paginated,
         'show_by': size,
         'count_pages': count_pages,
     }
     return render(request, 'index.html', context=context)
+
 
 def create(request):
     error = ''
@@ -42,9 +42,9 @@ def create(request):
             return redirect('index')
         else:
             error = "Форма была некорректной"
-
     form = NewsForm()
-    return render(request, 'news/news_form.html', {'form':form, 'error':error})
+    context = {'form': form, 'error': error}
+    return render(request, 'news/news_form.html', context=context)
 
 
 class NewsDetailView(generic.DetailView):

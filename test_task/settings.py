@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'test_task.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql', #PostgreSQL engine
-        'NAME': 'news', # database name
-        'USER': 'postgres', 
+        'ENGINE': 'django.db.backends.postgresql',   # PostgreSQL engine
+        'NAME': 'news',  # database name
+        'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST' : 'localhost',
+        'HOST': 'localhost',
         'PORT': '5432'
     }
 }
@@ -131,4 +131,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = 'media/'
 
 MEDIA_ROOT = BASE_DIR / 'news' / 'media'
-

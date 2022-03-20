@@ -44,7 +44,7 @@ Let's create new database. In your terminal enter command:
     $su postgres
 
 Terminal asks to enter password. Enter password "postgres". You switched on postgres user.
-If you do right, you can see like:
+If you do everything right, you can see:
 
 .. code-block::
 
@@ -74,7 +74,7 @@ Now you have to create virtual environment and tables for this app.
 Virtual Environment
 -------------------
 
-For successful running of a app, you have to create virtual environment and install some libraries, that are contained in the file *requirements.txt*. Run commands:
+For successful running of a app, you have to create a virtual environment and install some libraries, that are contained in the file *requirements.txt*. Run commands:
 
 .. code-block::
 
@@ -207,7 +207,3 @@ News detail information:
 News delete:
     .. figure :: image/11.png
         :scale: 100%
-
-
-    
-
