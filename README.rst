@@ -21,7 +21,7 @@ Clone repo:
 
 Database
 ---------
-For beginning, you have to configure database. In the file *test_task2/test_task/settings.py* you can see a dict DATABASE, which looks like:
+For beginning, you have to configure database. In the file *news/test_task/settings.py* you can see a dict DATABASE, which looks like:
 
 .. code-block:: python
 
